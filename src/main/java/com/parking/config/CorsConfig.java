@@ -8,9 +8,7 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import org.springframework.web.filter.CorsFilter;
-
 @Configuration
-
 public class CorsConfig {
 
     @Bean
@@ -20,16 +18,16 @@ public class CorsConfig {
                 new CorsConfiguration();
 
         // ALLOW REACT FRONTEND
-
         config.addAllowedOrigin(
                 "http://localhost:5173");
 
-        // ALLOW HEADERS
+        config.addAllowedOrigin(
+                "https://parking-frontend-k7v6.onrender.com");
 
+        // ALLOW HEADERS
         config.addAllowedHeader("*");
 
         // ALLOW METHODS
-
         config.addAllowedMethod("*");
 
         // ALLOW TOKEN / COOKIES
